@@ -10,10 +10,10 @@ public class targetControlla : MonoBehaviour
 
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision other)
     {
 
-        if (collision.gameObject.GetComponent<ballController>())
+        if (other.gameObject.GetComponent<ballController>())
         {
             Debug.Log("当たったよ");
             Destroy(gameObject);
